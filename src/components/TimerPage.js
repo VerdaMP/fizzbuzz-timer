@@ -55,7 +55,7 @@ function TimerPage() {
     const isBuzz = buzz && time % buzz === 0; // Check if time is multiple of buzz
 
     // Return appropriate text based on FizzBuzz logic
-    if (isFizz && isBuzz) return "FizzBuzz";
+    if (isFizz && isBuzz) return "Fizz Buzz";
     if (isFizz) return "Fizz";
     if (isBuzz) return "Buzz";
     return "";
@@ -115,7 +115,9 @@ function TimerPage() {
       </div>
 
       {/* Display FizzBuzz text */}
-      <div className="fizzbuzz-text">{getFizzBuzzText()}</div>
+      <div className="fizzbuzz-container">
+        <div className="fizzbuzz-text">{getFizzBuzzText()}</div>
+      </div>
     </>
   );
 }
