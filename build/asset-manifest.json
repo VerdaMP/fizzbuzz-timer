@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fizzbuzz-timer/static/css/main.cc77ea82.css",
+    "main.js": "/fizzbuzz-timer/static/js/main.d1e9766a.js",
+    "index.html": "/fizzbuzz-timer/index.html",
+    "main.cc77ea82.css.map": "/fizzbuzz-timer/static/css/main.cc77ea82.css.map",
+    "main.d1e9766a.js.map": "/fizzbuzz-timer/static/js/main.d1e9766a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc77ea82.css",
+    "static/js/main.d1e9766a.js"
+  ]
+}
