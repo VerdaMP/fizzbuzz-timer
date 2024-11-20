@@ -1,0 +1,23 @@
+/* Global Styling */
+body {
+  font-family: Arial, sans-serif;
+  color: #707070;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  margin-top: 20px;
+  font-size: 16px;
+}

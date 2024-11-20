@@ -1,0 +1,68 @@
+.timer-container {
+  position: relative;
+  text-align: center;
+}
+
+.back-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid #707070;
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.timer-label {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.counter-container {
+  font-size: 30px;
+  font-weight: bold;
+  border: 2px solid #707070;
+  border-radius: 5px;
+  width: 640px;
+  background-color: #f5f5f5;
+  padding: 28px;
+  text-align: left;
+}
+
+.button-group {
+  margin-top: 50px;
+}
+
+.timer-button {
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.start-button {
+  background-color: #5ccc87;
+  margin-right: 30px;
+}
+
+.start-button:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.stop-button {
+  background-color: #e66666;
+}
+
+.fizzbuzz-text {
+  margin-top: 65px;
+  font-size: 80px;
+  font-weight: bold;
+}

@@ -1,0 +1,31 @@
+.settings-container {
+  font-size: 30px;
+}
+
+.input-group {
+  margin-top: 40px;
+  font-size: 16px; /* The sample css showed 16 but directions said 18*/
+}
+
+.input-group label {
+  margin-right: 40px;
+}
+
+.input-group input {
+  width: 100px;
+  padding: 8px 16px;
+  border: 1px solid #707070;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.go-button {
+  margin-top: 50px;
+  border: 2px solid #707070;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: transparent;
+}
