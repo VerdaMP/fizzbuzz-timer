@@ -89,9 +89,9 @@ npm -v
 
 4.  **Start the Application**
 
-        ```bash
-        npm start
-        ```
+    ```bash
+    npm start
+    ```
 
     The app should now be running on http://localhost:3000.
 
@@ -101,50 +101,57 @@ npm -v
 
 1. **Landing on the Settings Page**
 
-    When you first open the app, you'll be presented with the **Settings** page.
+   When you first open the app, you'll be presented with the **Settings** page.
+
 2. **Input Fizz and Buzz Values**
 
-    * Enter integer values for **Fizz** and **Buzz** in the input fields.
+   - Enter integer values for **Fizz** and **Buzz** in the input fields.
 
-    * **Constraints:**
-        * Values must be integers between **2 and 10** (inclusive).
-        * **Fizz** and **Buzz** values cannot be changed once the timer has started.
+   - **Constraints:**
+     - Values must be integers between **2 and 10** (inclusive).
+     - **Fizz** and **Buzz** values cannot be changed once the timer has started.
 
 3. **Navigate to Timer**
 
-    * Click the **"Go to Timer >"** button to proceed.
-    * If inputs are invalid or missing, an error message will be displayed.
+   - Click the **"Go to Timer >"** button to proceed.
+   - If inputs are invalid or missing, an error message will be displayed.
 
 **Using the Timer**
-1. **Timer Page Overview**
-    * **Time Elapsed:** Displays the total elapsed time in **h:MM:SS** format.
 
-    * **Control Buttons:**
-        * **Start:** Begins the timer.
-        * **Stop / Reset:** Stops the timer if it's running or resets it if it's stopped.
-        * **\< Set Times:** Returns to the Settings page (only when the timer is stopped).
+1. **Timer Page Overview**
+
+   - **Time Elapsed:** Displays the total elapsed time in **h:MM:SS** format.
+
+   - **Control Buttons:**
+     - **Start:** Begins the timer.
+     - **Stop / Reset:** Stops the timer if it's running or resets it if it's stopped.
+     - **\< Set Times:** Returns to the Settings page (only when the timer is stopped).
 
 2. **Starting the Timer**
-    * Click the **"Start"** button to begin timing.
-    * The **"Start"** button will be disabled while the timer is running.
+
+   - Click the **"Start"** button to begin timing.
+   - The **"Start"** button will be disabled while the timer is running.
 
 3. **Understanding Fizz Buzz Display**
-    * The app will display:
-        * **"Fizz"** if the elapsed time (in seconds) is a multiple of **Fizz**.
-        * **"Buzz"** if it's a multiple of **Buzz**.
-        * **"FizzBuzz"** if it's a multiple of both.
+
+   - The app will display:
+     - **"Fizz"** if the elapsed time (in seconds) is a multiple of **Fizz**.
+     - **"Buzz"** if it's a multiple of **Buzz**.
+     - **"FizzBuzz"** if it's a multiple of both.
 
 4. **Stopping and Resetting the Timer**
-    * Click **"Stop"**" to halt the timer.
-    * While stopped, you can:
-        * Click **"Reset"** to reset the elapsed time to **0:00:00**.
-        * Click **"\< Set Times"** to return to the Settings page and adjust values.
+
+   - Click **"Stop"**" to halt the timer.
+   - While stopped, you can:
+     - Click **"Reset"** to reset the elapsed time to **0:00:00**.
+     - Click **"\< Set Times"** to return to the Settings page and adjust values.
 
 5. **Returning to Settings**
-    * Ensure the timer is stopped.
-    * Click **"\< Set Times"** to go back and modify Fizz and Buzz.
+   - Ensure the timer is stopped.
+   - Click **"\< Set Times"** to go back and modify Fizz and Buzz.
 
 ## **Application Structure**
+
 Here's an overview of the application's file structure:
 
     fizzbuzz-timer/
@@ -169,13 +176,13 @@ Here's an overview of the application's file structure:
     ├── package-lock.json
     └── README.md
 
-* Key Components
-    * **App.js:** The root component managing navigation between pages.
-    * **SettingsPage.js:** Handles user input for Fizz and Buzz values.
-    * **SettingsPage.css:** Contains SettingsPage component specific styles.
-    * **TimerPage.js:** Manages the timer functionality and Fizz Buzz display.
-    * **TimerPage.css:** Contains TimerPage component specific styles.
-    * **index.css:** Contains global styles.
+- Key Components
+  - **App.js:** The root component managing navigation between pages.
+  - **SettingsPage.js:** Handles user input for Fizz and Buzz values.
+  - **SettingsPage.css:** Contains SettingsPage component specific styles.
+  - **TimerPage.js:** Manages the timer functionality and Fizz Buzz display.
+  - **TimerPage.css:** Contains TimerPage component specific styles.
+  - **index.css:** Contains global styles.
 
 ## **State Management**
 
@@ -189,82 +196,87 @@ Here's an overview of the application's file structure:
 
     The application's state is divided into slices, each responsible for managing a specific part of the state. This modular approach enhances maintainability and scalability.
 
-1. ```appSlice```
+1. `appSlice`
 
-    **Purpose:** Manages the state related to the application flow and user inputs.
+   **Purpose:** Manages the state related to the application flow and user inputs.
 
-    * **State Variables:**
-        * ```page``` (string): Determines which page to display (```'settings'``` or ```'timer'```).
-        * ```fizz``` (string): Stores the user-input value for **Fizz.**
-        * ```buzz``` (string): Stores the user-input value for **Buzz.**
-        * ```fizzBuzzLocked``` (boolean): Controls whether the **Fizz** and **Buzz** inputs are editable.
+   - **State Variables:**
 
-    * **Actions and Reducers:**
-        * ```setPage(page)```: Updates the ```page``` state.
-        * ```setFizz(value)```: Updates the ```fizz``` state.
-        * ```setBuzz(value)```: Updates the ```buzz``` state.
-        * ```setFizzBuzzLocked(boolean)```: Locks or unlocks the **Fizz** and **Buzz** inputs.
-        * ```resetAppState()```: Resets the ```app``` state to initial values.
+     - `page` (string): Determines which page to display (`'settings'` or `'timer'`).
+     - `fizz` (string): Stores the user-input value for **Fizz.**
+     - `buzz` (string): Stores the user-input value for **Buzz.**
+     - `fizzBuzzLocked` (boolean): Controls whether the **Fizz** and **Buzz** inputs are editable.
 
-2. ```timerSlice```
+   - **Actions and Reducers:**
+     - `setPage(page)`: Updates the `page` state.
+     - `setFizz(value)`: Updates the `fizz` state.
+     - `setBuzz(value)`: Updates the `buzz` state.
+     - `setFizzBuzzLocked(boolean)`: Locks or unlocks the **Fizz** and **Buzz** inputs.
+     - `resetAppState()`: Resets the `app` state to initial values.
 
-    **Purpose:** Manages the state related to the timer functionality.
+2. `timerSlice`
 
-    * **State Variables:**
-        * ```time``` (number): Tracks the total elapsed time in seconds.
-        * ```running``` (boolean): Indicates whether the timer is currently running.
+   **Purpose:** Manages the state related to the timer functionality.
 
-    * **Actions and Reducers:**
-        * ```setTime(value)```: Updates the ```time``` state.
-        * ```setRunning(boolean)```: Starts or stops the timer 
-        * ```resetTimerState()```: Resets the ```timer``` state to initial values.
+   - **State Variables:**
 
-3. ```settingSlice```
+     - `time` (number): Tracks the total elapsed time in seconds.
+     - `running` (boolean): Indicates whether the timer is currently running.
 
-    **Purpose:** Manages the state related to the settings page functionality.
+   - **Actions and Reducers:**
+     - `setTime(value)`: Updates the `time` state.
+     - `setRunning(boolean)`: Starts or stops the timer
+     - `resetTimerState()`: Resets the `timer` state to initial values.
 
-    * **State Variables:**
-        * ```error``` (string): The error message to be displayed if the inputs for fizz or buzz are invalid.
+3. `settingSlice`
 
-    * **Actions and Reducers:**
-        * ```setError(value)```: Updates the ```error``` state.
+   **Purpose:** Manages the state related to the settings page functionality.
 
-* **Connecting Components to Redux**
+   - **State Variables:**
 
-    Components interact with the Redux store using React Redux hooks:
+     - `error` (string): The error message to be displayed if the inputs for fizz or buzz are invalid.
 
-    * ```useSelector```: Accesses state variables from the Redux store.
+   - **Actions and Reducers:**
+     - `setError(value)`: Updates the `error` state.
 
-    * ```useDispatch```: Dispatches actions to update the state.
+- **Connecting Components to Redux**
 
-* **SettingsPage Component**
-    
-    Handles user inputs for **Fizz** and **Buzz** values and interacts with the ```app``` slice.
+  Components interact with the Redux store using React Redux hooks:
 
-    * **Accesses:**
-        * ```fizz```, ```buzz```, ```fizzBuzzLocked``` from the ```app``` slice via ```useSelector```.
-        * ```error``` from the ```setting``` slice via ```useSelector```
+  - `useSelector`: Accesses state variables from the Redux store.
 
-    * **Dispatches:**
-        * ```setFizz(value)```
-        * ```setBuzz(value)```
-        * ```setPage('timer')```
-        * ```setError(string)```
+  - `useDispatch`: Dispatches actions to update the state.
 
-* **SettingsPage Component**
-    
-    Handles the timer functionality and Fizz Buzz logic, interacting with both ```app``` and ```timer``` slices.
-    * **Accesses:**
-        * ```fizz```, ```buzz``` from the ```app``` slice via ```useSelector```.
-        * ```time```, ```running``` from the ```timer``` slice via ```useSelector```.
+- **SettingsPage Component**
 
-    * **Dispatches:**
-        * ```setTime(value)```
-        * ```setRunning(value)```
-        * ```resetTimerState()```
-        * ```setPage('settings')```
-        * ```setFizzBuzzLocked(boolean)```
+  Handles user inputs for **Fizz** and **Buzz** values and interacts with the `app` slice.
 
+  - **Accesses:**
+
+    - `fizz`, `buzz`, `fizzBuzzLocked` from the `app` slice via `useSelector`.
+    - `error` from the `setting` slice via `useSelector`
+
+  - **Dispatches:**
+    - `setFizz(value)`
+    - `setBuzz(value)`
+    - `setPage('timer')`
+    - `setError(string)`
+
+- **SettingsPage Component**
+
+  Handles the timer functionality and Fizz Buzz logic, interacting with both `app` and `timer` slices.
+
+  - **Accesses:**
+
+    - `fizz`, `buzz` from the `app` slice via `useSelector`.
+    - `time`, `running` from the `timer` slice via `useSelector`.
+
+  - **Dispatches:**
+    - `setTime(value)`
+    - `setRunning(value)`
+    - `resetTimerState()`
+    - `setPage('settings')`
+    - `setFizzBuzzLocked(boolean)`
 
 ## **Styles and Design Guidelines**
 
@@ -272,63 +284,68 @@ Here's an overview of the application's file structure:
 
 ### **Global Styling**
 
-* **Font Family**: Arial
-* **Text Color**: #707070
-* **Alignment**: All content is centered both horizontally and vertically.
-* **Buttons**: All buttons will have a pointer set for their cursor.
+- **Font Family**: Arial
+- **Text Color**: #707070
+- **Alignment**: All content is centered both horizontally and vertically.
+- **Buttons**: All buttons will have a pointer set for their cursor.
 
 ### **Component Styling**
 
 ### **Settings Page**
-* **Header**: 
-    * Font size: ```30px```
-    * Font weight: ```bold```
-* **Input Labels**: Font size ```16px```.
-* **Input Fields**:
-    * Width: ```100px```
-    * Padding: ```8px 16px```
-    * Border: ```1px solid #707070```
-    * Background: ```#F5F5F5```
-    * Border-radius: ```5px```
-    * Font size: ```16px```
-* **"Go to Timer >" Button**:
-    * Border: ```2px solid #707070```
-    * Padding: ```15px 30px```
-    * Font size: ```16px```
-    * Font weight: ```bold```
-    * Border-radius: ```5px```
+
+- **Header**:
+  - Font size: `30px`
+  - Font weight: `bold`
+- **Input Labels**: Font size `16px`.
+- **Input Fields**:
+  - Width: `100px`
+  - Padding: `8px 16px`
+  - Border: `1px solid #707070`
+  - Background: `#F5F5F5`
+  - Border-radius: `5px`
+  - Font size: `16px`
+- **"Go to Timer >" Button**:
+  - Border: `2px solid #707070`
+  - Padding: `15px 30px`
+  - Font size: `16px`
+  - Font weight: `bold`
+  - Border-radius: `5px`
 
 ### **Timer Page**
-* **Back Button ("\< Set Times")**:
-    * Positioned at the top-left
-    * Same styling as "Go to Timer >" button
-* **"Time Elapsed" Header**: Font size ```30px```
-* **Counter Container**:
-    * Font size: ```30px``` 
-    * Font weight: ```bold```
-    * Border: ```2px solid #707070```
-    * Background: ```#F5F5F5```
-    * Padding: ```28px```
-    * Width: ```640px```
-    * Border-radius: ```5px```
 
-* **Control Buttons ("Start" & "Stop" / Reset")**:
-    * Width: ```200px```
-    * Padding: ```15px```
-    * Font size: ```16px``` 
-    * Font weight: ```bold```
-    * Border-radius: ```5px```
-* **Start Button**:
-    * Background: ```#5CCC87```
-    * Margin-right: ```30px```
-* **Stop / Reset Button**:
-    * Background: ```#E66666```
-* **Fizz Buzz Text**:
-    Font size: ```80px``` 
-    Font weight: ```bold```
-    Margin-top: ```65px```
+- **Back Button ("\< Set Times")**:
+  - Positioned at the top-left
+  - Same styling as "Go to Timer >" button
+- **"Time Elapsed" Header**: Font size `30px`
+- **Counter Container**:
+
+  - Font size: `30px`
+  - Font weight: `bold`
+  - Border: `2px solid #707070`
+  - Background: `#F5F5F5`
+  - Padding: `28px`
+  - Width: `640px`
+  - Border-radius: `5px`
+
+- **Control Buttons ("Start" & "Stop" / Reset")**:
+  - Width: `200px`
+  - Padding: `15px`
+  - Font size: `16px`
+  - Font weight: `bold`
+  - Border-radius: `5px`
+- **Start Button**:
+  - Background: `#5CCC87`
+  - Margin-right: `30px`
+- **Stop / Reset Button**:
+  - Background: `#E66666`
+- **Fizz Buzz Text**:
+  Font size: `80px`
+  Font weight: `bold`
+  Margin-top: `65px`
 
 ## **Acknowledgements**
-* **Original Author**: Michael Pantoja
-* **Design Inspiration**: Based on specific design requirements from Tenet3.
-* **Technologies**: Thanks to the open-source community for the tools that made this project possible.
+
+- **Original Author**: Michael Pantoja
+- **Design Inspiration**: Based on specific design requirements from Tenet3.
+- **Technologies**: Thanks to the open-source community for the tools that made this project possible.
+
