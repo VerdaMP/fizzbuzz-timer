@@ -72,13 +72,13 @@ npm -v
 1.  **Clone the Repository**
 
     ```bash
-    git clone https://github.com/yourusername/fizzbuzz-timer.git
+    git clone https://github.com/VerdaMP/fizzbuzz-timer.git
     ```
 
 2.  **Navigate to the Project Directory**
 
     ```bash
-    cd fizzbuzz
+    cd fizzbuzz-timer
     ```
 
 3.  **Install Dependencies**
@@ -348,4 +348,3 @@ Here's an overview of the application's file structure:
 - **Original Author**: Michael Pantoja
 - **Design Inspiration**: Based on specific design requirements from Tenet3.
 - **Technologies**: Thanks to the open-source community for the tools that made this project possible.
-
