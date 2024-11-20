@@ -79,17 +79,17 @@ function SettingsPage() {
         </label>
       </div>
 
+      {/* "Go to Timer >" Button */}
+      <button className="go-button" onClick={handleGoToTimerClick}>
+        Go to Timer &gt;
+      </button>
+
       {/* Display error message if any */}
       {error && (
         <div className="error-message" data-testid="error-message">
           {error}
         </div>
       )}
-
-      {/* "Go to Timer >" Button */}
-      <button className="go-button" onClick={handleGoToTimerClick}>
-        Go to Timer &gt;
-      </button>
     </div>
   );
 }

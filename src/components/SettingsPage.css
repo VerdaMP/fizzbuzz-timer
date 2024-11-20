@@ -29,3 +29,15 @@
   border-radius: 5px;
   background-color: transparent;
 }
+
+.error-message {
+  margin-top: 20px;
+  color: red;
+  font-size: 16px;
+  /* 
+   * Reserve 1px of height for 
+   * the error message so that
+   * it doesn't move page content
+   */
+  height: 1px;
+}

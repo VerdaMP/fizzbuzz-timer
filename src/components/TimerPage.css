@@ -62,8 +62,10 @@
 }
 
 .fizzbuzz-container {
-  /* Reserve 1px height to prevent 
-   * moving other page content */
+  /* 
+   * Reserve 1px height to prevent 
+   * moving other page content 
+   */
   height: 1px;
 }
 
